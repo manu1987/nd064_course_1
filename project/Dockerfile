@@ -1,7 +1,7 @@
 FROM python:2.7
 LABEL maintainer="Manu"
 
-COPY ../techtrends /app
+COPY ./project/techtrends /app
 WORKDIR /app
 RUN python -m pip install --upgrade pip 
 RUN pip install -r requirements.txt
