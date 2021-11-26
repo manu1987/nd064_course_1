@@ -4,6 +4,7 @@ from flask import Flask, jsonify, json, render_template, request, url_for, redir
 from werkzeug.exceptions import abort
 import logging,sys
 
+# Adding this comment to test GitHub Actions CI
 counter = 0
 
 # Function to get a database connection.
