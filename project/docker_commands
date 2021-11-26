@@ -1,11 +1,29 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build --tag techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run --name techtrendscontainer --publish 127.0.0.1:7111:3111 --detach --rm techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs techtrendscontainer
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+INFO - werkzeug - 2021-11-25 15:06:30,850  -  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+INFO - werkzeug - 2021-11-25 15:09:40,820  - 172.17.0.1 - - [25/Nov/2021 15:09:40] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 2021-11-25 15:09:40,897  - 172.17.0.1 - - [25/Nov/2021 15:09:40] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO - werkzeug - 2021-11-25 15:09:40,996  - 172.17.0.1 - - [25/Nov/2021 15:09:40] "GET /favicon.ico HTTP/1.1" 404 -
+INFO - app - 2021-11-25 15:16:14,591  - Article "2020 CNCF Annual Report" is retrieved.
+INFO - werkzeug - 2021-11-25 15:16:14,602  - 172.17.0.1 - - [25/Nov/2021 15:16:14] "GET /1 HTTP/1.1" 200 -
+INFO - app - 2021-11-25 15:16:30,396  - The "About Us" page is retrieved.
+INFO - werkzeug - 2021-11-25 15:16:30,401  - 172.17.0.1 - - [25/Nov/2021 15:16:30] "GET /about HTTP/1.1" 200 -
+INFO - werkzeug - 2021-11-25 15:16:34,535  - 172.17.0.1 - - [25/Nov/2021 15:16:34] "GET / HTTP/1.1" 200 -
+INFO - app - 2021-11-25 15:16:36,729  - Article "KubeCon + CloudNativeCon 2021" is retrieved.
+INFO - werkzeug - 2021-11-25 15:16:36,731  - 172.17.0.1 - - [25/Nov/2021 15:16:36] "GET /2 HTTP/1.1" 200 -
+INFO - werkzeug - 2021-11-25 15:16:38,067  - 172.17.0.1 - - [25/Nov/2021 15:16:38] "GET / HTTP/1.1" 200 -
+INFO - app - 2021-11-25 15:16:45,023  - Metrics request successfull
+INFO - werkzeug - 2021-11-25 15:16:45,024  - 172.17.0.1 - - [25/Nov/2021 15:16:45] "GET /metrics HTTP/1.1" 200 -
